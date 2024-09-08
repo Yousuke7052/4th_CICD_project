@@ -13,8 +13,12 @@ for file in $changed_files; do
     # 比较实际内容和期望内容
     if [ "$actual" = "$expected" ]; then
       echo "测试通过: 文件 $file 内容正确"
+      echo "预期内容: $expected"
+      echo "实际内容: $actual"
     else
       echo "测试失败: 文件 $file 内容不正确"
+      echo "预期内容: $expected"
+      echo "实际内容: $actual"
     fi
   fi
 done
